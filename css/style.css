@@ -77,12 +77,12 @@ ul{
 .info-contacto{
     display: flex;
     margin-left: 50px;
+    margin-top: 25px;
 }
 
 .horario-lugar{
     display: block;
 }
-
 
 /* QUIENES SOMOS*/
 
@@ -111,60 +111,38 @@ ul{
     left: 100px;
 }
 
-/* .descripcion1{
-    margin-bottom: 50px;
-    position: relative;
-    top: 80px;
-    font-size: 20px;
-}
-
-.descripcion2{
-    margin-bottom: 150px;
-    position: relative;
-    top: 110px;
-    font-size: 20px;
-}
-
-.lineas-rojas{
-    width: 200px;
-    height: 400px;
-    position: absolute;
-    top: 380px;
-    left: 100px;
-} */
-
 
 /* LOGOS */
 
 .logo-telefono{
+    position: relative;
+    bottom: 375px;
+    left: 10px;
     width: 35px;
     height: 35px;
-    position: absolute;
-    left: 10px;
-    top: 370px;
     border: 2px solid black;
     padding: 3px;
     border-radius: 10px;
 }
 
 .logo-instagram{
-    position: absolute;
-    left: 8px;
-    top: 445px;
+    position: relative;
+    bottom: 280px;
+    left: -32px;
 }
 
 .logo-reloj{
+    position: relative;
+    bottom: 185px;
+    left: -75px;
     width: 35px;
     height: 35px;
-    position: absolute;
-    left: 8px;
-    top: 515px;
 }
 
 .logo-ubicacion{
-    position: absolute;
-    left: 8px;
-    top: 595px;
+    position: relative;
+    bottom: 90px;
+    left: -115px;
 }
 
 
@@ -457,7 +435,8 @@ ul{
     
     .mapa{
         position: absolute;
-        right: 10;
+        top: 400px;
+        right: 50px;
     }
 }
 
@@ -578,7 +557,7 @@ ul{
     .mapa{
         position: absolute;
         right: 10px;
-        top: 310px;
+        top: 400px;
     }
 }
 
@@ -673,7 +652,7 @@ ul{
     
     .contacto-titulo{
         margin-bottom: 30px;
-        margin-left: 150px;
+        margin-left: 300px;
     }
 
     .info-contacto{
