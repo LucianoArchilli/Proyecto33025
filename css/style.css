@@ -87,29 +87,51 @@ ul{
 /* QUIENES SOMOS*/
 
 .quienes-somos{
-    position: relative;
-    top: 80px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .descripcion1{
+    font-size: 20px;
+    margin-left: 350px;
+}
+
+.descripcion2{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.lineas-rojas{
+    width: 200px;
+    height: 350px;
+    position: absolute;
+    top: 415px;
+    left: 100px;
+}
+
+/* .descripcion1{
+    margin-bottom: 50px;
     position: relative;
-    bottom: 30px;
-    margin-left: 430px;
+    top: 80px;
     font-size: 20px;
 }
 
 .descripcion2{
+    margin-bottom: 150px;
     position: relative;
-    bottom: 30px;
-    margin-left: 390px;
+    top: 110px;
     font-size: 20px;
 }
 
 .lineas-rojas{
+    width: 200px;
+    height: 400px;
     position: absolute;
-    bottom: 50px;
-    left: 280px;
-}
+    top: 380px;
+    left: 100px;
+} */
 
 
 /* LOGOS */
@@ -376,10 +398,10 @@ ul{
 
 
     .lineas-rojas{
-        top: 350px;
         height: 320px;
-        width: 160px;
-        left: 270px;
+        width: 200px;
+        top: 450px;
+        left: 100px;
     }
 
     .descripcion1{
@@ -499,8 +521,8 @@ ul{
 
 
     .lineas-rojas{
-        top: 300px;
-        left: 230px;
+        top: 400px;
+        left: 100px;
         width: 200px;
         height: 360px;
     }
@@ -638,19 +660,12 @@ ul{
 
     .lineas-rojas{
         position: absolute;
-        left: 100px;
-        top: 460px;
+        left: 40px;
+        top: 400px;
         width: 280px;
         height: 490px;
         opacity: .3;
     }
-
-    .quienes-somos{
-        position: relative;
-        top: 180px;
-        left: 70px;
-    }
-
 
 
     /* CONTACTO TABLET */
@@ -790,39 +805,27 @@ ul{
 
 
     .quienes-somos{
-        text-align: center;
-        margin-bottom: 80px;
+        position: relative;
+        top: 10px;
+        left: 15px;
+        margin-bottom: 600px;
     }
     
     .descripcion1{
-        width: 100%;
-        position: relative;
-        top: 80px;
-        right: 430px;
-        font-size: 20px;
-        margin-bottom: 40px;
+        position: absolute;
+        left: -320px;
+        top: 250px;
     }
     
     .descripcion2{
-        width: 100%;
-        position: relative;
-        top: 80px;
-        right: 390px;
-        font-size: 20px;
+        position: absolute;
+        top: 450px;
+        left: -220px;
+        margin-bottom: 250px;
     }
     
     .lineas-rojas{
-        position: absolute;
-        left: 170px;
-        bottom: 0;
-        top: 300px;
-        width: 300px;
-        height: 600px;
-        opacity: .3;
-    }
-
-    footer{
-        margin-top: 100px;
+      top: 320px;
     }
 
 
