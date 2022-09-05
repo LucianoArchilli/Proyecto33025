@@ -55,6 +55,8 @@ ul{
 /* CONTACTO */
 
 .contacto-titulo{
+    margin-top: 25px;
+    margin-bottom: 25px;
     margin-left: 310px;
 }
 
@@ -62,10 +64,12 @@ ul{
     display: flex;
     margin-left: 50px;
     margin-top: 25px;
+    
 }
 
 .horario-lugar{
     display: block;
+    gap: 50px;
 }
 
 /* QUIENES SOMOS*/
@@ -90,9 +94,10 @@ ul{
 .lineas-rojas{
     width: 200px;
     height: 350px;
-    position: absolute;
-    top: 415px;
-    left: 100px;
+    position: relative;
+    left: 30px;
+    bottom: 300px;
+    margin-bottom: -300px;
 }
 
 
@@ -131,10 +136,12 @@ ul{
 
 
 .mapa{
-    position: absolute;
-    right: 110px;
-    top: 350px;
-    border: 10px inset rgb(61, 61, 221);
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    margin-bottom: -300px;
+    position: relative;
+    bottom: 370px;    
 }
 
 
@@ -266,13 +273,6 @@ ul{
     /* QUIENES SOMOS SCREEN 2 */
 
 
-    .lineas-rojas{
-        height: 320px;
-        width: 200px;
-        top: 450px;
-        left: 100px;
-    }
-
     .descripcion1{
         margin-top: 40px;
         margin-bottom: 40px;
@@ -324,11 +324,7 @@ ul{
         left: -115px;
     }
     
-    .mapa{
-        position: absolute;
-        top: 400px;
-        right: 50px;
-    }
+    
 }
 
 
@@ -389,14 +385,6 @@ ul{
 
     /* QUIENES SOMOS SCREEN 1 */
 
-
-    .lineas-rojas{
-        top: 400px;
-        left: 100px;
-        width: 200px;
-        height: 360px;
-    }
-
     .descripcion1{
         margin-bottom: 40px;
     }
@@ -446,9 +434,7 @@ ul{
     }
 
     .mapa{
-        position: absolute;
-        right: 10px;
-        top: 400px;
+        margin-right: 10px;
     }
 }
 
@@ -688,19 +674,20 @@ ul{
 
     .descripcion1{
         position: absolute;
-        left: -320px;
+        left: -330px;
         top: -180px;
     }
     
     .descripcion2{
         position: absolute;
-        left: -220px;
+        left: -230px;
         margin-bottom: 250px;
     }
     
     .lineas-rojas{
-      top: -100px;
-      opacity: .3;
+      position: relative;
+      top: -600px;
+      margin-bottom: -650px;
       width: 280px;
       height: 490px;
     }
