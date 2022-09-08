@@ -1,4 +1,25 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+.info-rojo {
+  border-left: 6px solid #be1e2d;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.info-azul {
+  border-left: 6px solid #030636;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.info-blanco {
+  border-left: 6px solid #f5f5f5;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.info-negro {
+  border-left: 6px solid #060606;
+  padding-left: 5px;
+  padding-right: 5px; }
+
 body {
   font-family: 'Nunito', sans-serif;
   background: linear-gradient(#fefefe, rgba(89, 89, 255, 0.678)); }
@@ -9,7 +30,7 @@ body {
 
 footer {
   text-align: center;
-  border-top: 1px solid black;
+  border-top: 1px solid #030636;
   margin-top: 20px;
   padding-top: 20px; }
 
@@ -18,7 +39,7 @@ footer {
   border: 2px solid #030636;
   margin-bottom: 15px;
   padding: 20px;
-  background-color: #f6f4f1; }
+  background-color: #f5f5f5; }
   .bordes_menu .espaciado {
     margin-left: 15px;
     font-size: 18px; }
@@ -38,7 +59,7 @@ div .bienvenido {
 div .items-inicio {
   display: inline;
   margin-left: 55px;
-  border-bottom: 4px double blue; }
+  border-bottom: 4px double #030636; }
 
 /* GRID */
 .gridcontainer {
@@ -67,7 +88,7 @@ div .items-inicio {
       transition: all 0.5s ease; }
       .gridcontainer .maincontainer .thecard:hover {
         transform: rotateY(180deg); }
-      .gridcontainer .maincontainer .thecard .thefront {
+      .gridcontainer .maincontainer .thecard .thefront, .gridcontainer .maincontainer .thecard .thefront1, .gridcontainer .maincontainer .thecard .thefront2, .gridcontainer .maincontainer .thecard .thefront3, .gridcontainer .maincontainer .thecard .thefront4 {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -77,7 +98,7 @@ div .items-inicio {
         background-repeat: no-repeat;
         color: #333;
         border: 2px solid #030636;
-        background-color: #e0d9d9;
+        background-color: #f5f5f5;
         border-radius: 15px; }
       .gridcontainer .maincontainer .thecard .thefront1 {
         background-image: url(../img/distribucion.png); }
@@ -92,8 +113,8 @@ div .items-inicio {
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
-        background: #e0d9d9;
-        color: black;
+        background: #f5f5f5;
+        color: #060606;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -103,6 +124,134 @@ div .items-inicio {
         border: 2px solid #030636;
         border-radius: 15px; }
 
+/* PRODUCTOS */
+.titulo-centro {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.container .gap {
+  gap: 40px;
+  margin-top: 40px; }
+  .container .gap .grid_borders {
+    width: 40%;
+    border: 2px solid #030636;
+    padding: 20px;
+    text-align: end;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: rgba(236, 236, 236, 0.671); }
+    .container .gap .grid_borders .img_distribucion {
+      width: 120px; }
+    .container .gap .grid_borders .img_polyv {
+      width: 120px; }
+    .container .gap .grid_borders .img_aceites {
+      width: 190px; }
+    .container .gap .grid_borders .img_filtros {
+      width: 130px; }
+    .container .gap .grid_borders .img_bobinas {
+      width: 220px; }
+    .container .gap .grid_borders .img_bujias {
+      width: 190px; }
+    .container .gap .grid_borders .img_luces {
+      width: 160px; }
+    .container .gap .grid_borders .img_baterias {
+      width: 150px; }
+    .container .gap .grid_borders .img_accesorios {
+      width: 170px; }
+    .container .gap .grid_borders .img_amortiguacion {
+      width: 190px; }
+
+/* PROMOCIONES | CARDS */
+.tarjetas {
+  display: flex;
+  justify-content: space-evenly; }
+  .tarjetas .card {
+    background-color: rgba(0, 0, 255, 0.123);
+    border: 2px solid #030636; }
+    .tarjetas .card .card_tamaño {
+      width: 100%;
+      height: 250px;
+      border-bottom: 2px solid #030636; }
+
+/* QUIENES SOMOS */
+.quienes-somos {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.descripciones .descripcion1 {
+  font-size: 20px;
+  margin-left: 350px; }
+
+.descripciones .descripcion2 {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 250px; }
+
+.lineas-rojas {
+  width: 200px;
+  height: 350px;
+  position: relative;
+  left: 30px;
+  bottom: 300px;
+  margin-bottom: -300px; }
+
+/* CONTACTO */
+.contacto-titulo {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 310px; }
+
+.info-contacto {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 25px; }
+
+.horario-lugar {
+  display: block;
+  gap: 50px; }
+
+/* LOGOS */
+.logos .logo-telefono {
+  position: relative;
+  bottom: 5px;
+  left: 10px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #060606;
+  padding: 3px;
+  border-radius: 10px; }
+
+.logos .logo-instagram {
+  position: relative;
+  bottom: 280px;
+  left: -32px; }
+
+.logos .logo-reloj {
+  position: relative;
+  bottom: 185px;
+  left: -75px;
+  width: 35px;
+  height: 35px; }
+
+.logos .logo-ubicacion {
+  position: relative;
+  bottom: 100px;
+  left: -115px; }
+
+.mapa {
+  display: flex;
+  justify-content: end;
+  margin-right: 50px;
+  margin-bottom: -300px;
+  position: relative;
+  bottom: 370px; }
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1200px) {
   /* INDEX SCREEN 2 */
@@ -110,22 +259,22 @@ div .items-inicio {
     margin-top: 10px;
     margin-left: 80px;
     font-size: 20px; }
-  .gridcontainer {
+  .container .gridcontainer {
     width: 100%;
     margin-top: 50px;
     padding: 0;
     gap: 15px; }
-    .gridcontainer .maincontainer {
+    .container .gridcontainer .maincontainer {
       width: 80%;
       height: 200px;
       left: 45px; }
-      .gridcontainer .maincontainer .thecard .thefront {
+      .container .gridcontainer .maincontainer .thecard .thefront, .container .gridcontainer .maincontainer .thecard .thefront1, .container .gridcontainer .maincontainer .thecard .thefront2, .container .gridcontainer .maincontainer .thecard .thefront3, .container .gridcontainer .maincontainer .thecard .thefront4 {
         background-size: 70%;
         background-position: 60px; }
-      .gridcontainer .maincontainer .thecard .thefront1 {
+      .container .gridcontainer .maincontainer .thecard .thefront1 {
         background-size: 220px;
         background-position: 110px; }
-      .gridcontainer .maincontainer .thecard .thefront3 {
+      .container .gridcontainer .maincontainer .thecard .thefront3 {
         background-size: 220px;
         background-position: 120px; } }
 
@@ -133,8 +282,7 @@ div .items-inicio {
   /* INDEX SCREEN 1 */
   .bordes_menu .espaciado {
     margin-top: 10px;
-    margin-left: 10px;
-    font-size: 20px; }
+    margin-left: 10px; }
   .items-inicio {
     display: flex;
     justify-content: center;
@@ -149,7 +297,7 @@ div .items-inicio {
       width: 80%;
       height: 200px;
       left: 45px; }
-      .gridcontainer .maincontainer .thecard .thefront {
+      .gridcontainer .maincontainer .thecard .thefront, .gridcontainer .maincontainer .thecard .thefront1, .gridcontainer .maincontainer .thecard .thefront2, .gridcontainer .maincontainer .thecard .thefront3, .gridcontainer .maincontainer .thecard .thefront4 {
         background-size: 70%;
         background-position: 60px; }
       .gridcontainer .maincontainer .thecard .thefront1 {
@@ -158,6 +306,19 @@ div .items-inicio {
       .gridcontainer .maincontainer .thecard .thefront3 {
         background-size: 220px;
         background-position: 100px; } }
+
+/* CONTACTO SCREEN 1 */
+.logos .logo-telefono {
+  position: relative;
+  bottom: 370px; }
+
+.logos .logo-instagram {
+  position: relative;
+  bottom: 275px; }
+
+.logos .logo-reloj {
+  position: relative;
+  bottom: 180px; }
 
 @media screen and (max-width: 768px) {
   /* INDEX TABLET */
@@ -179,7 +340,7 @@ div .items-inicio {
       width: 80%;
       height: 200px;
       left: 45px; }
-      .gridcontainer .maincontainer .thecard .thefront {
+      .gridcontainer .maincontainer .thecard .thefront, .gridcontainer .maincontainer .thecard .thefront1, .gridcontainer .maincontainer .thecard .thefront2, .gridcontainer .maincontainer .thecard .thefront3, .gridcontainer .maincontainer .thecard .thefront4 {
         background-size: 50%;
         background-position: 140px; }
       .gridcontainer .maincontainer .thecard:Hover {
@@ -190,6 +351,31 @@ div .items-inicio {
     position: relative;
     top: 10px;
     color: #ececec; } }
+
+/* PRODUCTOS TABLET */
+/* PROMOCIONES TABLET */
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; }
+
+/* QUIENES SOMOS TABLET */
+.lineas-rojas {
+  position: relative;
+  bottom: 450px; }
+
+/* CONTACTO TABLET */
+.logos .logo-telefono {
+  position: relative;
+  bottom: 360px; }
+
+.logos .logo-instagram {
+  position: relative;
+  bottom: 270px; }
+
+.mapa {
+  display: none; }
 
 @media screen and (max-width: 480px) {
   /* INDEX CEL */
@@ -217,8 +403,86 @@ div .items-inicio {
       width: 80%;
       height: 200px;
       left: 65px; }
-      .gridcontainer .maincontainer .thecard .thefront {
+      .gridcontainer .maincontainer .thecard .thefront, .gridcontainer .maincontainer .thecard .thefront1, .gridcontainer .maincontainer .thecard .thefront2, .gridcontainer .maincontainer .thecard .thefront3, .gridcontainer .maincontainer .thecard .thefront4 {
         background-size: 100%;
         background-position: 0; }
       .gridcontainer .maincontainer .thecard:Hover {
         transform: rotateY(0deg); } }
+
+/* PRODUCTOS CEL */
+.container .gap {
+  gap: 20px;
+  margin-top: 20px; }
+  .container .gap .grid_borders {
+    width: 90%;
+    height: 100%;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: end;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 15px; }
+  .container .gap .articulo_p {
+    display: none; }
+
+/* QUIENES SOMOS CEL */
+.quienes-somos {
+  position: relative;
+  top: 10px;
+  left: 15px;
+  margin-bottom: 600px; }
+
+.descripciones {
+  position: relative;
+  top: -400px; }
+  .descripciones .descripcion1 {
+    position: absolute;
+    left: -330px;
+    top: -180px;
+    margin-top: 50px; }
+  .descripciones .descripcion2 {
+    position: absolute;
+    left: -230px;
+    margin-bottom: 250px; }
+
+.lineas-rojas {
+  position: relative;
+  top: -600px;
+  margin-bottom: -650px;
+  width: 280px;
+  height: 490px;
+  opacity: .3; }
+
+/* CONTACTO CEL */
+.contacto-titulo {
+  margin-bottom: 30px;
+  margin-left: 150px; }
+
+.info-contacto {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.logos .logo-telefono {
+  position: relative;
+  top: -475px;
+  border: 2px solid black;
+  padding: 3px;
+  border-radius: 10px; }
+
+.logos .logo-instagram {
+  position: relative;
+  top: -355px; }
+
+.logos .logo-reloj {
+  position: relative;
+  top: -235px; }
+
+.logos .logo-ubicacion {
+  position: relative;
+  top: -110px; }
+
+.mapa {
+  display: none; }

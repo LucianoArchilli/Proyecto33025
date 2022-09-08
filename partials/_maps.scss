@@ -1,0 +1,14 @@
+$colors:(
+    "rojo": $rojo-pa,
+    "azul": $azul-pa,
+    "blanco": $blanco,
+    "negro": $negro,
+);
+
+@each $key, $val in $colors{
+    .info-#{$key}{
+        border-left: 6px solid $val;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

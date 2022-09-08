@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import "../partials/variables";
+@import "../partials/maps";
+
+
+@mixin size ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
 
 body{
     font-family: 'Nunito', sans-serif;
@@ -16,7 +24,7 @@ body{
 
 footer{
     text-align: center;
-    border-top: 1px solid black;
+    border-top: 1px solid $azul-pa;
     margin-top: 20px;
     padding-top: 20px;
 }
@@ -24,10 +32,10 @@ footer{
 /* MENU */
 
 .bordes_menu{
-    border: 2px solid rgb(3, 6, 54);
+    border: 2px solid $azul-pa;
     margin-bottom: 15px;
     padding: 20px;
-    background-color: rgb(246, 244, 241);
+    background-color: $blanco;
 
     .espaciado{
         margin-left: 15px;
@@ -55,7 +63,7 @@ div{
     .items-inicio{
         display: inline;
         margin-left: 55px;
-        border-bottom: 4px double blue ;
+        border-bottom: 4px double map-get($map: $colors, $key: "azul");
     }
 }
 
@@ -84,14 +92,12 @@ div{
 
     .maincontainer{
         position: relative;
-        width: 600px;
-        height: 320px;
+        @include size(600px, 320px);
         margin: 20px;
 
         .thecard{
             position: absolute;
-            width: 100%;
-            height: 100%;
+            @include size(100%, 100%);
             transform-style: preserve-3d;
             transition: all 0.5s ease;
 
@@ -101,39 +107,41 @@ div{
 
             .thefront{
                 position: absolute;
-                width: 100%;
-                height: 100%;
+                @include size(100%, 100%);
                 backface-visibility: hidden;
                 background-position: 130px;
                 background-size: 300px 300px;
                 background-repeat: no-repeat;
                 color: #333;
 
-                border: 2px solid rgb(3, 6, 54);
-                background-color: rgb(224, 217, 217);
+                border: 2px solid $azul-pa;
+                background-color: $blanco;
                 border-radius: 15px;
             }
 
             .thefront1{
+                @extend .thefront;
                 background-image: url(../img/distribucion.png);
             }
             .thefront2{
+                @extend .thefront;
                 background-image: url(../img/luces.png);
             }
             .thefront3{
+                @extend .thefront;
                 background-image: url(../img/filtros.png);
             }
             .thefront4{
+                @extend .thefront;
                 background-image: url(../img/accesorios.png);
             }
 
             .theback{
                 position: absolute;
-                width: 100%;
-                height: 100%;
+                @include size(100%, 100%);
                 backface-visibility: hidden;
-                background: rgb(224, 217, 217);
-                color: black;
+                background: $blanco;
+                color: $negro;
 
                 display: flex;
                 flex-direction: column;
@@ -142,199 +150,189 @@ div{
                 font-size: 20px;
                 transform: rotateY(180deg);
 
-                border: 2px solid rgb(3, 6, 54);
+                border: 2px solid $azul-pa;
                 border-radius: 15px;
             }
         }
     }
 }
 
-/* MEDIA QUERIES */
 
-@media screen and (max-width:1200px){
+/* PRODUCTOS */
 
-    /* INDEX SCREEN 2 */
+.titulo-centro{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-    .espaciado{
-        margin-top: 10px;
-        margin-left: 80px;
+.container{
+    .gap{
+        gap: 40px;
+        margin-top: 40px;
+
+        .grid_borders{
+            width: 40%;
+            border: 2px solid $azul-pa;
+            padding: 20px;
+            text-align: end;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-size: 18px;
+            border-radius: 15px;
+            background-color: rgba(236, 236, 236, 0.671);
+            
+
+            .img_distribucion{
+                width: 120px;
+            }
+            .img_polyv{
+                width: 120px; 
+            }
+            .img_aceites{
+                width: 190px;
+            }
+            .img_filtros{
+                width: 130px;
+            }
+            .img_bobinas{
+                width: 220px;  
+            }
+            .img_bujias{
+                width: 190px;
+            }
+            .img_luces{
+                width: 160px; 
+            }
+            .img_baterias{
+                width: 150px;
+            }
+            .img_accesorios{
+                width: 170px;
+            }
+            .img_amortiguacion{
+                width: 190px;  
+            }
+        }
+    }
+}
+
+
+/* PROMOCIONES | CARDS */
+
+.tarjetas{
+    display: flex;
+    justify-content: space-evenly;
+
+    .card{
+        background-color: rgba(0, 0, 255, 0.123);
+        border: 2px solid $azul-pa;
+
+        .card_tamaño{
+            @include size(100%, 250px);
+        
+            border-bottom: 2px solid $azul-pa ;
+        }
+    }
+}
+
+
+
+/* QUIENES SOMOS */
+
+.quienes-somos{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.descripciones{
+    .descripcion1{
         font-size: 20px;
+    margin-left: 350px;
     }
-
-    .gridcontainer{
-        width:100%;
-        margin-top: 50px;
-        padding: 0;
-        gap: 15px;
-
-        .maincontainer{
-            width: 80%;
-            height: 200px;
-            left: 45px;
-
-            .thecard{
-                .thefront{
-                    background-size: 70%;
-                    background-position: 60px;
-                }
-            
-                .thefront1{
-                    background-size: 220px;
-                    background-position: 110px;
-                }
-            
-                .thefront3{
-                    background-size: 220px;
-                    background-position: 120px;
-                }
-            }
-        }
+    .descripcion2{
+        font-size: 20px;
+    margin-top: 50px;
+    margin-left: 250px;
     }
-}    
-
-@media screen and (max-width:1024px){
-
-    /* INDEX SCREEN 1 */
-
-
-    .bordes_menu{
-        .espaciado{
-            margin-top: 10px;
-            margin-left: 10px;
-            font-size: 20px;
-        }
-    }
-
-    .items-inicio{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
-
-    .gridcontainer{
-        width:100%;
-        margin-top: 50px;
-        padding: 0;
-        gap: 15px;
-
-        .maincontainer{
-            width: 80%;
-            height: 200px;
-            left: 45px;
-
-            .thecard{
-                .thefront{
-                    background-size: 70%;
-                    background-position: 60px;
-                }
-            
-                .thefront1{
-                    background-size: 220px;
-                    background-position: 90px;
-                }
-            
-                .thefront3{
-                    background-size: 220px;
-                    background-position: 100px;
-                }
-            }
-        }
-    }    
 }
-@media screen and (max-width:768px){
 
-    /* INDEX TABLET */
+.lineas-rojas{
+    @include size(200px, 350px);
+    position: relative;
+    left: 30px;
+    bottom: 300px;
+    margin-bottom: -300px;
+}
 
-    .items-inicio{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
 
-    .gridcontainer{
-        width:90%;
-        margin-top: 50px;
-        padding: 0;
-        gap: 15px;
-        display: flex;
-        flex-direction: column;
-       justify-content: center;
-       align-items: center;
+/* CONTACTO */
 
-       .maincontainer{
-        width: 80%;
-        height: 200px;
-        left: 45px;
 
-        .thecard{
-            .thefront{
-                background-size: 50%;
-                background-position: 140px;
-            }
-        }
-        .thecard:Hover{
-            transform: rotateY(0deg);
-        }
-    }
-    }
 
-    .msj_media{
-        display: block;
-        text-align: center;
+.contacto-titulo{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 310px;
+}
+
+.info-contacto{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 25px;
+    
+}
+
+.horario-lugar{
+    display: block;
+    gap: 50px;
+}
+
+/* LOGOS */ 
+
+.logos{
+    .logo-telefono{
         position: relative;
-        top: 10px;
-        color: rgb(236, 236, 236);
+        bottom: 5px;
+        left: 10px;
+        @include size(35px, 35px);
+        border: 2px solid $negro;
+        padding: 3px;
+        border-radius: 10px;
     }
-}
-
-@media screen and (max-width:480px){
-
-    /* INDEX CEL */
-
-    .msj_media{
-        padding-bottom: 20px;
-        display: block;
-        text-align: center;
+    
+    .logo-instagram{
         position: relative;
-        top: 40px;
+        bottom: 280px;
+        left: -32px;
     }
-
-    .items-inicio{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+    
+    .logo-reloj{
+        position: relative;
+        bottom: 185px;
+        left: -75px;
+        @include size(35px, 35px);
     }
-
-    .gridcontainer{
-        width:70%;
-        margin-top: 50px;
-        padding: 0;
-        gap: 15px;
-        display: flex;
-        flex-direction: column;
-       justify-content: center;
-       align-items: center;
-
-       .maincontainer{
-        width: 80%;
-        height: 200px;
-        left: 65px;
-
-            .thecard{
-                .thefront{
-                    background-size: 100%;
-                    background-position: 0;
-                }
-            }
-
-            .thecard:Hover{
-            transform: rotateY(0deg);
-            }
-        }
+    
+    .logo-ubicacion{
+        position: relative;
+        bottom: 100px;
+        left: -115px;
     }
 }
 
-// @import "../partials/mediaqueries"
+.mapa{
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    margin-bottom: -300px;
+    position: relative;
+    bottom: 370px;    
+}
+
+
+@import "../partials/mediaqueries"
+    // @import "../partials/mediaqueries"
