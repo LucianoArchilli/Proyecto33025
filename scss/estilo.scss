@@ -4,10 +4,6 @@
 @import "../partials/mixins";
 
 
-
-
-
-
 body{
     font-family: 'Nunito', sans-serif;
     background:linear-gradient(rgb(254, 254, 254), rgba(89, 89, 255, 0.678));
@@ -335,6 +331,5 @@ div{
 }
 
 
-@import "../partials/mediaqueries";
 
-    // @import "../partials/mediaqueries"
+@import "../partials/mediaqueries";
