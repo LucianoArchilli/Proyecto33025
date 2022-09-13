@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 @import "../partials/variables";
 @import "../partials/maps";
+@import "../partials/mixins";
 
 
-@mixin size ($ancho, $alto){
-    width: $ancho;
-    height: $alto;
-}
+
+
+
 
 body{
     font-family: 'Nunito', sans-serif;
@@ -172,6 +172,7 @@ div{
         margin-top: 40px;
 
         .grid_borders{
+            height: 320px;
             width: 40%;
             border: 2px solid $azul-pa;
             padding: 20px;
@@ -296,7 +297,7 @@ div{
 .logos{
     .logo-telefono{
         position: relative;
-        bottom: 5px;
+        bottom: 375px;
         left: 10px;
         @include size(35px, 35px);
         border: 2px solid $negro;
@@ -319,7 +320,7 @@ div{
     
     .logo-ubicacion{
         position: relative;
-        bottom: 100px;
+        bottom: 90px;
         left: -115px;
     }
 }
@@ -334,5 +335,6 @@ div{
 }
 
 
-@import "../partials/mediaqueries"
+@import "../partials/mediaqueries";
+
     // @import "../partials/mediaqueries"
