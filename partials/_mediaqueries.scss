@@ -137,6 +137,14 @@
 
 @media screen and (max-width:768px){
 
+    .bordes_menu{
+        .espaciado{
+            &:hover{
+                transform: scale(0);
+            }
+        }
+    }
+
 
     /* INDEX TABLET */
 
@@ -233,6 +241,10 @@
 
 /* CONTACTO TABLET */
 
+.horario-lugar{
+    margin-left: 15px;
+}
+
 .logos{
     .logo-telefono{
         position: relative;
@@ -258,8 +270,9 @@
 }
 
 
-
 @media screen and (max-width:480px){
+
+    
 
     /* INDEX CEL */
 
@@ -353,13 +366,14 @@
         .descripcion1{
             position: absolute;
             left: -330px;
-            top: -180px;
+            top: -200px;
             margin-top: 50px;
         }
         
         .descripcion2{
             position: absolute;
             left: -230px;
+            top: 50px;
             margin-bottom: 250px;
         }
     }
@@ -384,6 +398,11 @@
     .info-contacto{
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+
+    .horario-lugar{
+        margin-right: 15px;
+        margin-left: 15px;
     }
 
     .logos{
@@ -417,3 +436,79 @@
 
 
 }
+
+
+
+@media screen and (min-width: 360px) and (max-width: 441px){
+
+    
+
+    /* INDEX CEL ESP */
+
+    .msj_media{
+        padding-bottom: 20px;
+        display: block;
+        text-align: center;
+        position: relative;
+        top: 40px;
+    }
+
+    .items-inicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .gridcontainer{
+        width:80%;
+        margin-left: -20px;
+        }
+    
+
+    /* QUIENES SOMOS CEL ESP */
+
+    .descripciones{
+        .descripcion1{
+            position: absolute;
+            left: -340px;
+        }
+        
+        .descripcion2{
+            position: absolute;
+            left: -240px;
+        }
+    }
+
+
+    /* CONTACTO CEL ESP */
+
+
+    .horario-lugar{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .logos{
+        .logo-telefono{
+            display: none;
+        }
+
+        .logo-instagram{
+            display: none;
+        }
+
+        .logo-reloj{
+            display: none;
+        }
+
+        .logo-ubicacion{
+            display: none;
+        }
+    }
+
+
+}
+
+
+

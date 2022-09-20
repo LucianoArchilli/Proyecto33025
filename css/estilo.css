@@ -24,7 +24,8 @@ body {
   font-family: 'Nunito', sans-serif;
   background: linear-gradient(#fefefe, rgba(89, 89, 255, 0.678)); }
   body .banner {
-    width: 100%; }
+    width: 100%;
+    background-image: url(../index.html); }
   body .msj_media {
     display: none; }
 
@@ -324,6 +325,8 @@ div .items-inicio {
     margin-right: 0; } }
 
 @media screen and (max-width: 768px) {
+  .bordes_menu .espaciado:hover {
+    transform: scale(0); }
   /* INDEX TABLET */
   .items-inicio {
     display: flex;
@@ -383,6 +386,8 @@ div .items-inicio {
     position: relative;
     bottom: 450px; }
   /* CONTACTO TABLET */
+  .horario-lugar {
+    margin-left: 15px; }
   .logos .logo-telefono {
     position: relative;
     bottom: 360px; }
@@ -456,11 +461,12 @@ div .items-inicio {
     .descripciones .descripcion1 {
       position: absolute;
       left: -330px;
-      top: -180px;
+      top: -200px;
       margin-top: 50px; }
     .descripciones .descripcion2 {
       position: absolute;
       left: -230px;
+      top: 50px;
       margin-bottom: 250px; }
   .lineas-rojas {
     position: relative;
@@ -476,6 +482,9 @@ div .items-inicio {
   .info-contacto {
     margin-top: 30px;
     margin-bottom: 30px; }
+  .horario-lugar {
+    margin-right: 15px;
+    margin-left: 15px; }
   .logos .logo-telefono {
     position: relative;
     top: -495px;
@@ -492,4 +501,40 @@ div .items-inicio {
     position: relative;
     top: -110px; }
   .mapa {
+    display: none; } }
+
+@media screen and (min-width: 360px) and (max-width: 441px) {
+  /* INDEX CEL ESP */
+  .msj_media {
+    padding-bottom: 20px;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 40px; }
+  .items-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; }
+  .gridcontainer {
+    width: 80%;
+    margin-left: -20px; }
+  /* QUIENES SOMOS CEL ESP */
+  .descripciones .descripcion1 {
+    position: absolute;
+    left: -340px; }
+  .descripciones .descripcion2 {
+    position: absolute;
+    left: -240px; }
+  /* CONTACTO CEL ESP */
+  .horario-lugar {
+    margin-right: 15px;
+    margin-left: 15px; }
+  .logos .logo-telefono {
+    display: none; }
+  .logos .logo-instagram {
+    display: none; }
+  .logos .logo-reloj {
+    display: none; }
+  .logos .logo-ubicacion {
     display: none; } }
