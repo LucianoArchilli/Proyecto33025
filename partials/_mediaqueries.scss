@@ -5,69 +5,6 @@
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width:1200px){
-
-    /* INDEX SCREEN 2 */
-    .bordes_menu{
-        .espaciado{
-            margin-top: 10px;
-            margin-left: 80px;
-            font-size: 20px;
-        }
-    }
-
-    .container{
-        .gridcontainer{
-                display: grid;
-                grid-template-columns: 1fr 0.5fr;
-                grid-template-rows: 1fr 0.5fr;
-                grid-template-areas: 
-                "item1 item2"
-                "item4 item3";
-            
-                .item1{
-                    grid-area: item1;
-                }
-                .item2{
-                    grid-area: item2;
-                }
-                .item3{
-                    grid-area: item3;
-                }
-                .item4{
-                    grid-area: item4;
-                }
-            
-    
-            .maincontainer{
-                @include size(40%, 200px);
-                left: 45px;
-                
-    
-                .thecard{
-                    .thefront{
-                        background-size: 70%;
-                        background-position: 60px;
-                    }
-                
-                    .thefront1{
-                        background-size: 220px;
-                        background-position: 110px;
-                    }
-                
-                    .thefront3{
-                        background-size: 220px;
-                        background-position: 120px;
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-
-
 
 @media screen and (max-width:1024px){
 
@@ -455,7 +392,7 @@
 
 
 
-@media screen and (min-width: 360px) and (max-width: 441px){
+@media screen and (max-width: 441px){
 
     
 
@@ -525,6 +462,3 @@
 
 
 }
-
-
-
