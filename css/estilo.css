@@ -262,12 +262,20 @@ div .items-inicio {
     margin-left: 80px;
     font-size: 20px; }
   .container .gridcontainer {
-    width: 100%;
-    margin-right: 50px;
-    padding: 0;
-    gap: 15px; }
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: "item1 item2" "item4 item3"; }
+    .container .gridcontainer .item1 {
+      grid-area: item1; }
+    .container .gridcontainer .item2 {
+      grid-area: item2; }
+    .container .gridcontainer .item3 {
+      grid-area: item3; }
+    .container .gridcontainer .item4 {
+      grid-area: item4; }
     .container .gridcontainer .maincontainer {
-      width: 100%;
+      width: 40%;
       height: 200px;
       left: 45px; }
       .container .gridcontainer .maincontainer .thecard .thefront, .container .gridcontainer .maincontainer .thecard .thefront1, .container .gridcontainer .maincontainer .thecard .thefront2, .container .gridcontainer .maincontainer .thecard .thefront3, .container .gridcontainer .maincontainer .thecard .thefront4 {
