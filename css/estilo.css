@@ -302,7 +302,7 @@ div .items-inicio {
 
 @media screen and (max-width: 768px) {
   .bordes_menu .espaciado:hover {
-    transform: scale(0); }
+    transform: none; }
   /* INDEX TABLET */
   .items-inicio {
     display: flex;
