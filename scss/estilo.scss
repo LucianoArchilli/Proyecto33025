@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import "../partials/variables";
+@import "../partials/maps";
+@import "../partials/mixins";
+
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background:linear-gradient(rgb(254, 254, 254), rgba(89, 89, 255, 0.678));
+
+    .banner{
+        width: 100%;
+        background-image: url(../index.html);
+    }
+
+    .msj_media{
+        display: none;
+    }
+    
+}
+
+footer{
+    text-align: center;
+    border-top: 1px solid $azul-pa;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* MENU */
+
+.bordes_menu{
+    border: 2px solid $azul-pa;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: $blanco;
+
+    .espaciado{
+        margin-left: 15px;
+        font-size: 18px;
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+}
+
+/* INDEX */
+
+div{
+    .titulo-centro{
+        text-align: center;
+    }
+    
+    .bienvenido{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+
+    .items-inicio{
+        display: inline;
+        margin-left: 55px;
+        border-bottom: 4px double map-get($map: $colors, $key: "azul");
+    }
+}
+
+/* GRID */
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "item1 item2"
+    "item4 item3";
+
+    .item1{
+        grid-area: item1;
+    }
+    .item2{
+        grid-area: item2;
+    }
+    .item3{
+        grid-area: item3;
+    }
+    .item4{
+        grid-area: item4;
+    }
+
+    .maincontainer{
+        position: relative;
+        left: 60px;
+        @include size(550px, 320px);
+        margin-top: 40px;
+        
+
+        .thecard{
+            position: absolute;
+            @include size(100%, 100%);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+
+            &:hover{
+                transform: rotateY(180deg);
+            }
+
+            .thefront{
+                position: absolute;
+                @include size(100%, 100%);
+                backface-visibility: hidden;
+                background-position: 130px;
+                background-size: 300px 300px;
+                background-repeat: no-repeat;
+                color: #333;
+
+                border: 2px solid $azul-pa;
+                background-color: $blanco;
+                border-radius: 15px;
+            }
+
+            .thefront1{
+                @extend .thefront;
+                background-image: url(../img/distribucion.png);
+            }
+            .thefront2{
+                @extend .thefront;
+                background-image: url(../img/luces.png);
+            }
+            .thefront3{
+                @extend .thefront;
+                background-image: url(../img/filtros.png);
+            }
+            .thefront4{
+                @extend .thefront;
+                background-image: url(../img/accesorios.png);
+            }
+
+            .theback{
+                position: absolute;
+                @include size(100%, 100%);
+                backface-visibility: hidden;
+                background: $blanco;
+                color: $negro;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 20px;
+                transform: rotateY(180deg);
+
+                border: 2px solid $azul-pa;
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+
+/* PRODUCTOS */
+
+.titulo-centro{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container{
+    .gap{
+        gap: 40px;
+        margin-top: 40px;
+
+        .grid_borders{
+            height: 320px;
+            width: 40%;
+            border: 2px solid $azul-pa;
+            padding: 20px;
+            text-align: end;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-size: 18px;
+            border-radius: 15px;
+            background-color: rgba(236, 236, 236, 0.671);
+            
+
+            .img_distribucion{
+                width: 120px;
+            }
+            .img_polyv{
+                width: 120px; 
+            }
+            .img_aceites{
+                width: 190px;
+            }
+            .img_filtros{
+                width: 130px;
+            }
+            .img_bobinas{
+                width: 220px;  
+            }
+            .img_bujias{
+                width: 190px;
+            }
+            .img_luces{
+                width: 160px; 
+            }
+            .img_baterias{
+                width: 150px;
+            }
+            .img_accesorios{
+                width: 170px;
+            }
+            .img_amortiguacion{
+                width: 190px;  
+            }
+        }
+    }
+}
+
+
+/* PROMOCIONES | CARDS */
+
+.tarjetas{
+    display: flex;
+    justify-content: space-evenly;
+
+    .card{
+        background-color: rgba(0, 0, 255, 0.123);
+        border: 2px solid $azul-pa;
+
+        .card_tamaño{
+            @include size(100%, 250px);
+        
+            border-bottom: 2px solid $azul-pa ;
+        }
+    }
+}
+
+
+
+/* QUIENES SOMOS */
+
+.quienes-somos{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.descripciones{
+    .descripcion1{
+        font-size: 20px;
+    margin-left: 350px;
+    }
+    .descripcion2{
+        font-size: 20px;
+    margin-top: 50px;
+    margin-left: 250px;
+    }
+}
+
+.lineas-rojas{
+    @include size(200px, 350px);
+    position: relative;
+    left: 30px;
+    bottom: 300px;
+    margin-bottom: -300px;
+}
+
+
+/* CONTACTO */
+
+
+
+.contacto-titulo{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 310px;
+}
+
+.info-contacto{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 25px;
+    
+}
+
+.horario-lugar{
+    display: block;
+    gap: 50px;
+}
+
+/* LOGOS */ 
+
+.logos{
+    .logo-telefono{
+        position: relative;
+        bottom: 375px;
+        left: 10px;
+        @include size(35px, 35px);
+        border: 2px solid $negro;
+        padding: 3px;
+        border-radius: 10px;
+    }
+    
+    .logo-instagram{
+        position: relative;
+        bottom: 280px;
+        left: -32px;
+    }
+    
+    .logo-reloj{
+        position: relative;
+        bottom: 185px;
+        left: -75px;
+        @include size(35px, 35px);
+    }
+    
+    .logo-ubicacion{
+        position: relative;
+        bottom: 90px;
+        left: -115px;
+    }
+}
+
+.mapa{
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    margin-bottom: -300px;
+    position: relative;
+    bottom: 370px;    
+}
+
+
+
+@import "../partials/mediaqueries";

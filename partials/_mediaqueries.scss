@@ -1,0 +1,464 @@
+@mixin size ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width:1024px){
+
+
+    /* INDEX SCREEN 1 */
+
+
+    .bordes_menu{
+        .espaciado{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    }
+
+    .items-inicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .gridcontainer{
+        width:100%;
+        margin-top: 50px;
+        padding: 0;
+        gap: 15px;
+
+        .maincontainer{
+            @include size(80%, 200px);
+            left: 45px;
+
+            .thecard{
+                .thefront{
+                    background-size: 70%;
+                    background-position: 60px;
+                }
+            
+                .thefront1{
+                    background-size: 220px;
+                    background-position: 90px;
+                }
+            
+                .thefront3{
+                    background-size: 220px;
+                    background-position: 100px;
+                }
+            }
+        }
+    } 
+
+
+    /* CONTACTO SCREEN 1 */
+
+.logos{
+    .logo-telefono{
+        position: relative;
+        bottom: 370px;
+    }
+
+    .logo-instagram{
+        position: relative;
+        bottom: 275px
+    }
+
+    .logo-reloj{
+        position: relative;
+        bottom: 180px;
+    }
+
+    .logo-ubicacion{
+        position: relative;
+        bottom: 85px;
+    }
+}
+
+.mapa{
+    margin-right: 0;
+}
+
+
+}
+
+
+@media screen and (max-width:768px){
+
+    .bordes_menu{
+        .espaciado{
+            &:hover{
+                transform: none;
+            }
+        }
+    }
+
+
+    /* INDEX TABLET */
+
+    .items-inicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .gridcontainer{
+        width:90%;
+        margin-top: 50px;
+        padding: 0;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+            .maincontainer{
+            @include size(80%, 200px);
+            left: 45px;
+
+            .thecard{
+                .thefront{
+                    background-size: 50%;
+                    background-position: 140px;
+                }
+            }
+            .thecard:Hover{
+                transform: rotateY(0deg);
+            }
+        }
+    }
+
+    .msj_media{
+        display: block;
+        text-align: center;
+        position: relative;
+        top: 10px;
+        color: rgb(236, 236, 236);
+    }
+
+
+    /* PRODUCTOS TABLET */
+
+
+.container{
+    .gap{
+        gap: 20px;
+        margin-top: 20px;
+
+        .grid_borders{
+            width: 90%;
+            height: 100%;
+            border: 2px solid black;
+            padding: 20px;
+            text-align: end;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 15px;
+
+            .articulo_p{
+                display: none;
+            }
+        }
+
+    }
+    
+}
+
+
+    /* PROMOCIONES TABLET */
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* QUIENES SOMOS TABLET */
+
+.lineas-rojas{
+    position: relative;
+    bottom: 450px;
+}
+
+
+/* CONTACTO TABLET */
+
+.horario-lugar{
+    margin-left: 15px;
+}
+
+.logos{
+    .logo-telefono{
+        position: relative;
+        bottom: 360px;
+    }
+
+    .logo-instagram{
+        position: relative;
+        bottom: 270px;
+    }
+
+    .logo-ubicacion{
+        position: relative;
+        bottom: 90px;
+    }
+}
+
+.mapa{
+    display: none;
+}
+
+   
+}
+
+
+@media screen and (max-width:480px){
+
+    
+
+    /* INDEX CEL */
+
+    .msj_media{
+        padding-bottom: 20px;
+        display: block;
+        text-align: center;
+        position: relative;
+        top: 40px;
+    }
+
+    .items-inicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .gridcontainer{
+        width:70%;
+        margin-top: 50px;
+        padding: 0;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    .maincontainer{
+        @include size(80%, 200px);
+        left: 65px;
+
+            .thecard{
+                .thefront{
+                    background-size: 100%;
+                    background-position: 0;
+                }
+            }
+
+            .thecard:Hover{
+                transform: rotateY(0deg);
+            }
+            }
+        }
+
+
+        /* PRODUCTOS CEL */
+
+    .container{
+        
+        .gap{
+            gap: 20px;
+            margin-top: 20px;
+
+            .grid_borders{
+                width: 90%;
+                height: 100%;
+                border: 2px solid black;
+                padding: 20px;
+                text-align: end;
+                margin-left: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 18px;
+                border-radius: 15px;
+                
+            }
+
+            .articulo_p{
+                display: none;
+            }
+        }
+    
+}
+    
+
+    /* QUIENES SOMOS CEL */
+
+    .quienes-somos{
+        position: relative;
+        top: 10px;
+        left: 15px;
+        margin-bottom: 600px;
+    }
+
+    .descripciones{
+        position: relative;
+        top: -400px;
+
+        .descripcion1{
+            position: absolute;
+            left: -330px;
+            top: -200px;
+            margin-top: 50px;
+        }
+        
+        .descripcion2{
+            position: absolute;
+            left: -230px;
+            top: 50px;
+            margin-bottom: 250px;
+        }
+    }
+
+    .lineas-rojas{
+        position: relative;
+        top: -600px;
+        margin-bottom: -650px;
+        width: 280px;
+        height: 490px;
+        opacity: .3;
+    }
+
+
+    /* CONTACTO CEL */
+
+    .contacto-titulo{
+        margin-bottom: 30px;
+        margin-left: 150px;
+    }
+
+    .info-contacto{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .horario-lugar{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .logos{
+        .logo-telefono{
+            position: relative;
+            top: -495px;
+            border: 2px solid black;
+            padding: 3px;
+            border-radius: 10px;
+        }
+
+        .logo-instagram{
+            position: relative;
+            top: -385px;
+        }
+
+        .logo-reloj{
+            position: relative;
+            top: -245px;
+        }
+
+        .logo-ubicacion{
+            position: relative;
+            top: -110px;
+        }
+    }
+
+    .mapa{
+        display: none;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 441px){
+
+    
+
+    /* INDEX CEL ESP */
+
+    .msj_media{
+        padding-bottom: 20px;
+        display: block;
+        text-align: center;
+        position: relative;
+        top: 40px;
+    }
+
+    .items-inicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .gridcontainer{
+        width:80%;
+        margin-left: -20px;
+        }
+    
+
+    /* QUIENES SOMOS CEL ESP */
+
+    .descripciones{
+        .descripcion1{
+            position: absolute;
+            left: -340px;
+        }
+        
+        .descripcion2{
+            position: absolute;
+            left: -240px;
+        }
+    }
+
+
+    /* CONTACTO CEL ESP */
+
+
+    .horario-lugar{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .logos{
+        .logo-telefono{
+            display: none;
+        }
+
+        .logo-instagram{
+            display: none;
+        }
+
+        .logo-reloj{
+            display: none;
+        }
+
+        .logo-ubicacion{
+            display: none;
+        }
+    }
+
+
+}
