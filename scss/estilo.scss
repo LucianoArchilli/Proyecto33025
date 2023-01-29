@@ -70,6 +70,7 @@ div{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: -50px;
     grid-template-areas: 
     "item1 item2"
     "item4 item3";
@@ -89,7 +90,7 @@ div{
 
     .maincontainer{
         position: relative;
-        left: 60px;
+        left: 30px;
         @include size(550px, 320px);
         margin-top: 40px;
         

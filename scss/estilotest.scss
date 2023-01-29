@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import "../partials/variables";
+@import "../partials/maps";
+@import "../partials/mixins";
+
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background:linear-gradient(rgb(254, 254, 254), rgba(89, 89, 255, 0.678));
+
+    .banner{
+        width: 100%;
+        background-image: url(../index.html);
+    }
+
+    .msj_media{
+        display: none;
+    }
+    
+}
+
+footer{
+    text-align: center;
+    border-top: 1px solid $azul-pa;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* MENU */
+
+.bordes_menu{
+    border: 2px solid $azul-pa;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: $blanco;
+
+    .espaciado{
+        margin-left: 15px;
+        font-size: 18px;
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+}
+
+/* INDEX */
+
+div{
+    .titulo-centro{
+        text-align: center;
+    }
+    
+    .bienvenido{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+
+    .items-inicio{
+        display: inline;
+        margin-left: 55px;
+        border-bottom: 4px double map-get($map: $colors, $key: "azul");
+    }
+}
+
+/* GRID */
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "item1 item2"
+        "item3 item4";
+
+        .item1{
+            grid-area: item1;
+        }
+        .item2{
+            grid-area: item2;
+        }
+        .item3{
+            grid-area: item3;
+        }
+        .item4{
+            grid-area: item4;
+        }
+}
